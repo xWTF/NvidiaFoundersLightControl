@@ -57,7 +57,7 @@ namespace NvidiaFoundersLightControl
                     trackBar_x_red.Value = zone.Red;
                     trackBar_x_green.Value = zone.Green;
                     trackBar_x_blue.Value = zone.Blue;
-                    trackBar_x_brightness.Value = zone.BrightnessInPercentage;
+                    trackBar_x_brightness.Value = Math.Min(zone.BrightnessInPercentage, (byte)100);
                     break;
                 case (IlluminationZoneLocation)0x0C: // NV_GPU_CLIENT_ILLUM_ZONE_LOCATION_GPU_BACK_0
                 case IlluminationZoneLocation.SLITop:
